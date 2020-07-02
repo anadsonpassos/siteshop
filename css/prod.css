@@ -1,0 +1,287 @@
+/*produtos*/
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/* ul {
+    padding: 0px!important; 
+} */
+
+h1 {
+    width: 100%;
+    background-color: rgb(178, 178, 185);
+    text-align: center;
+}
+
+section h3 {
+    text-align: center;
+}
+
+section h3:hover {
+    color: #54afb6;
+}
+
+.whatsapp-link {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 60px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px 2px #888;
+    z-index: 1000;
+
+}
+
+.fa-whatsapp {
+    margin-top: 16px;
+}
+
+.menu-principal {
+    width: 100%;
+    background-color: #1c222c;
+    height: 90px;
+}
+
+main {
+    margin: 0 auto;
+    width: 980px;
+    position: relative;
+    text-decoration: none;
+}
+
+.logo {
+    margin-top: 15px;
+    float: left;
+    width: 50%;
+}
+
+.redes-sociais ul li {
+    margin-left: 25px;
+    display: inline-block;
+    float: left;
+    list-style: none;
+}
+
+.redes-sociais {
+    margin-top: 15px;
+    width: 25%;
+    float: right;
+}
+
+main div a {
+    display: flex;
+    align-items: center;
+    color: #41414d;
+    font-size: 18px;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+    
+/* main div a:hover {
+    border-bottom: 3px solid #00bac6;
+} */
+    
+main div a:hover {
+    color: #54afb6;
+}
+
+.prod-3 {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px; 
+    width: 29%;
+    float: left;
+    position: relative;
+}
+
+.bloco-imagem img {
+    margin: 0 auto;
+    width: 60%;
+    height: auto;
+}
+
+.bloco-imagem {
+    height: 100%;
+    
+    right: 130px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 5px;
+}
+
+.bloco-imagem b, p {
+    text-align: center;
+}
+
+.bloco-texto {
+    margin-top: 3em;
+}
+
+h3 {
+    font-weight: normal!important;
+}
+
+.bloco-imagens-texto {
+    background-color: #eeeeee;
+}
+.bloco-imagens-texto:before {
+    width: 100%;
+    display: inline-block;
+    content: '';
+    height: 52px;
+    background: #ffffff;
+    background-image: url('../src/assets/setinha.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bloco-imagens-texto:after {
+    width: 100%;
+    display: inline-block;
+    content: '';
+    height: 70px;
+    background: #eeeeee;
+} 
+.col-4 {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+/* .contact {
+    text-align: center;
+} */
+
+.col-4 img {
+    cursor: pointer;
+    margin: 0 auto;
+    padding-top: 1em;
+    vertical-align: middle;
+}
+.col-4 img:hover {
+    margin-top: 10px!important;
+    position: relative!important;
+}
+
+.bloco-logos {
+    height: 170px;
+}
+
+.bloco-logos img {
+    margin-top: 50px;
+}
+
+.clock {
+    color: #898989!important;
+}
+
+.prod-3 {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px; 
+    width: 29%;
+    float: left;
+    position: relative;
+}
+
+/* .footer h3 {
+    text-align: center;
+    width: 100%;
+} */
+
+.footer {
+    background-image: url('../src/assets/footer.png');
+    color: #ffffff;
+}
+
+.footer-2 {
+    background-image: url('../src/assets/footer2.png');
+    color: #c1c1c1;
+    height: 70px;
+    text-align: center;
+}
+
+.footer-2 p {
+    text-align: center;
+    padding: 20px;
+}
+
+.contat {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+}
+
+.clock-1:before {
+    content: '';
+    width:  15px;
+    height: 15px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+}
+
+.local:before {
+    content: '';
+    width:  18px;
+    height: 21px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+}
+
+.emailico:before {
+    content: '';
+    width:  15px;
+    height: 13px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    background-image: url('../src/assets/email.png');
+}  
+.telefoneico:before {
+    content: '';
+    width:  15px;
+    height: 15px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+}
+
+.whatsappico:before {
+    content: '';
+    width:  15px;
+    height: 18px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+}
+
+.local:before {
+    background-image: url('../src/assets/local.png');
+}  
+
+.clock-1:before{
+    background-image: url('../src/assets/clock.png');
+}
+
+.telefoneico:before {
+    background-image: url('../src/assets/telefoneico.png');
+}
+
+.whatsappico:before {
+    background-image: url('../src/assets/whatsapp.png');
+}
+
+.content a {
+    color: #cc5c5c;
+}
