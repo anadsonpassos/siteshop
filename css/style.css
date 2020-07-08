@@ -5,7 +5,7 @@ body {
 }
 
 ul {
-    padding: 0px!important; 
+    padding: 0px!important;
 }
 
 .whatsapp-link {
@@ -26,6 +26,11 @@ ul {
 
 .fa-whatsapp {
     margin-top: 16px;
+}
+
+.header-1 {
+    width: 100%;
+    display: flex;
 }
 
 .menu-principal {
@@ -77,11 +82,11 @@ main, .content {
     margin-left: 15px;
     height: 50px;
 }
-    
+
 .menu ul li:hover {
     border-bottom: 3px solid #00bac6;
 }
-    
+
 .menu ul li a:hover {
     color: #00bac6;
 }
@@ -175,13 +180,13 @@ button.slick-next {
 video {
     border-radius: 20px;
     box-shadow: 5px 5px 4px rgb(199, 215, 228);
-    
+
 }
 
 li.slick-active button {
     background: #00bac6;
 }
-    
+
 .slick-dots li {
     padding-left: 30px;
     display: inline-block;
@@ -206,9 +211,9 @@ li.slick-active button {
 .col-3 {
     text-align: center;
     padding-left: 10px;
-    padding-right: 10px; 
+    padding-right: 10px;
     width: 29%;
-    
+
     float: left;
     position: relative;
 }
@@ -259,7 +264,7 @@ h3 {
     content: '';
     height: 70px;
     background: #eeeeee;
-} 
+}
 .col-4 {
     float: left;
     width: 25%;
@@ -346,7 +351,7 @@ h3 {
     background-repeat: no-repeat;
     padding-left: 15px;
     background-image: url('../src/assets/email.png');
-}  
+}
 .telefoneico:before {
     content: '';
     width:  15px;
@@ -367,7 +372,7 @@ h3 {
 
 .local:before {
     background-image: url('../src/assets/local.png');
-}  
+}
 
 .clock-1:before{
     background-image: url('../src/assets/clock.png');
@@ -383,4 +388,27 @@ h3 {
 
 .content a {
     color: #cc5c5c;
+}
+
+@viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+@-ms-viewport{
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+@media(max-width: 414px) {
+    .logo {
+        width: 200px;
+        padding-left: 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    .logo {
+        width: 235px;
+        padding-left: 12px;
+    }
 }
