@@ -1,0 +1,607 @@
+/*----------------------------------------------------------
+CSS Reset - Normalize.css
+----------------------------------------------------------*/
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+/*----------------------------------------------------------
+Configurações Gerais <<<<<==================================
+----------------------------------------------------------*/
+body{
+    color:#868686;
+    font-family: "Open Sans", Helvetica, sans-serif, arial;
+    font-size: 18px; /* 18px Ã· 16px = 1.125em */
+    font-weight: 300;
+    line-height: 1.2222222222em; /* 22px Ã· 18px = 1.22222222222em*/
+    text-align: left;
+}
+.center{
+    margin: 0 auto;
+    max-width:1200px; /*largura máxima do layout*/
+    width: 90%; /*ajuste do layout Ã  tela*/
+}
+/*.clearfix usado para adicionar um espaço vazio antes e depois dos elementos
+evitando que os floats se aglomerem.
+*/
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+/*fim do clearfix*/
+img, picture, video, embed {
+    max-width: 100%; /*define a largura máxima em até 100%*/
+}
+h1, h2{
+    color:#8b8b8b;
+    font-size: 3.3333333333em; /* 60px Ã· 18px = 3.3333333333em */
+    font-weight: 800;
+    letter-spacing: -0.05em; /* -3px Ã· 60px = -0.05em */
+    line-height: 1em; /* 60px Ã· 60px = 1em */
+}
+h3{
+    font-size: 1.7777777778em; /* 32px Ã· 18px = 1.7777777778em */
+    font-weight: 300;
+    letter-spacing: -0.0625em; /* -2px Ã· 32px = -0.0625em */
+    line-height: 1.1875em; /* 38px Ã· 32px = 1.1875em */
+}
+p{
+    font-weight: 300;
+    letter-spacing: -0.05555555556em; /* -1px Ã· 18px = -0.05555555556em */
+}
+a, a:link, a:visited{
+    color:#8b8b8b;
+    font-weight:400;
+    text-decoration:none;
+}
+a:hover{
+    color: #00bac6;
+    text-decoration:underline;
+    text-shadow:none;
+}
+/*----------------------------------------------------------
+Seção HEADER - Topo do Site <<<<<===========================
+----------------------------------------------------------*/
+header{
+    border-bottom: 1px solid #E0E0E0;
+    height:90px;
+    width:100%; /*1200px Ã· 1200px = 1 x 100 = 100%*/
+    background-color: #262626;
+}
+
+.menu-principal .logo a {
+    background: url(../src/assets/lemes.png) no-repeat;
+    display: block;
+    float: left;
+    height: 59px;
+    text-indent: -9999;
+    width: 50%;
+    margin-top: 15px;
+}
+.redes-sociais {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+.redes-sociais ul {
+    float: right;
+}
+.redes-sociais ul li {
+    margin-left: 25px;
+    display: block;
+    float: left;
+    list-style: none;
+}
+
+nav {
+    float: left;
+    text-align: left;
+    width: 100%;
+    line-height: 55px;
+    position: relative;
+}
+nav ul {
+    align-items: center;
+    display: flex;
+    margin: 0;
+    font-size: .8rem;
+    list-style-type: none;
+    padding: 0;
+}
+nav li {
+    display: inline;
+    font-size: 18px;
+    text-transform: uppercase;
+    height: 50px;
+    padding-right: 1.125rem;
+    position: relative;
+}
+nav li:hover .menu-sub-element {
+    display: block;
+}
+.menu-sub-element {
+    background-color: #fff;
+    box-shadow: 0.125rem 0.125rem 0.3125rem #a6a6a6;
+    display: none;
+    height: auto;
+    min-height: 100%;
+    overflow-y: auto;
+    position: absolute;
+    right: -12rem;
+    top: 46px;
+    width: 20rem;
+}
+nav li .menu-sub-element li {
+    background-color: #fff;
+    cursor: pointer;
+    padding: .5rem 1.3125rem .5rem .9375rem;
+    width: 100%;
+    float: left;
+    height: auto;
+    line-height: 25px;
+}
+nav li .menu-sub-element li span {
+    width: 100%;
+}
+nav li .menu-sub-element li a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.busca {
+    text-align: center;
+    width: 30%;
+    float: right;
+    display: none;
+}
+
+.busca input {
+    background-image: url('../src/assets/icone-search.png');
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 190px;
+    margin-top: 5px;
+    background-position: 96%;
+    border: 2px solid #d6d6d6;
+}
+
+.col-100 {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+button.slick-prev {
+    font-size: 0px;
+    border: none;
+    width: 25px;
+    height: 51px;
+    z-index: 9;
+    background-color: transparent;
+    position: absolute;
+    background-image: url('../src/assets/anterior.png');
+    top: 35%;
+    left: 14%;
+}
+
+button.slick-next {
+    font-size: 0px;
+    border: none;
+    width: 25px;
+    height: 51px;
+    z-index: 9;
+    background-color: transparent;
+    position: absolute;
+    background-image: url('../src/assets/proximo.png');
+    top: 35%;
+    right: 14%;
+}
+
+.slick-list {
+    width: 100%!important;
+}
+
+.slick-initialized {
+    overflow: hidden;
+}
+
+.slick-dots li button {
+    font-size: 0px;
+    border: 5px solid #ffffff;
+    width: 26px;
+    height: 26px;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slick-dots {
+    margin: 0 auto;
+    width: 50%;
+    position: absolute;
+    left: 40%;
+    top: 370px;
+}
+li.slick-active button {
+    background: #00bac6;
+}
+
+.slick-dots li {
+    padding-left: 30px;
+    display: inline-block;
+}
+
+section.chamada {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    height: auto;
+}
+.texto-destaque {
+    text-align: center;
+}
+.texto-destaque strong {
+    color: #646464;
+}
+.texto-destaque h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #818181;
+}
+.texto-destaque p {
+    font-size: 15px;
+    color: #9a9a9a;
+}
+
+.col-3 {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 29%;
+    float: left;
+}
+.bloco-imagens-texto .content {
+    margin-left: 24%;
+    float: left;
+}
+
+.bloco-imagem img {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+.bloco-imagem {
+    height: 320px;
+    border: 1px solid #c5c5c5;
+    right: 130px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    margin-left: 10px;
+}
+
+.bloco-imagem b, p {
+    text-align: left;
+}
+
+.bloco-texto {
+    margin-top: 3em;
+}
+
+h3 {
+    font-weight: normal!important;
+}
+
+section.container {
+    width: 100%;
+    height: auto;
+}
+.bloco-imagens-texto {
+    background-color: #eeeeee;
+}
+.bloco-imagens-texto:before {
+    width: 100%;
+    display: inline-block;
+    content: '';
+    height: 52px;
+    background: #ffffff;
+    background-image: url('../src/assets/setinha.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bloco-imagens-texto:after {
+    width: 100%;
+    display: inline-block;
+    content: '';
+    height: 70px;
+    background: #eeeeee;
+}
+video {
+    border-radius: 20px;
+    box-shadow: 5px 5px 4px rgb(199, 215, 228);
+
+}
+.col-4 {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+.col-4 img {
+    cursor: pointer;
+    margin: 0 auto;
+    padding-top: 1em;
+    vertical-align: middle;
+}
+.col-4 img:hover {
+    margin-top: 10px!important;
+    position: relative!important;
+}
+.bloco-logos {
+    height: 170px !important;
+}
+
+.bloco-logos img {
+    margin-top: 50px;
+}
+
+.whatsapp-link {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 60px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 1px 1px 2px #888;
+    z-index: 1000;
+
+}
+
+.fa-whatsapp {
+    margin-top: 16px;
+}
+footer {
+    display: flex;
+    font-size: 12px;
+    line-height: 0px;
+}
+footer p {
+    text-align: center;
+}
+footer.contact {
+    background-image: url('../src/assets/footer.png');
+    color: #ffffff;
+}
+footer.desenvolvimento {
+    background-image: url('../src/assets/footer2.png');
+    color: #c1c1c1;
+}
+.contato {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+}
+.clock {
+    color: #898989!important;
+}
+
+.clock-1:before {
+    content: '';
+    width:  15px;
+    height: 15px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+}
+
+.local:before {
+    content: '';
+    width:  18px;
+    height: 21px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+}
+
+.emailico:before {
+    content: '';
+    width:  15px;
+    height: 13px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    background-image: url('../src/assets/email.png');
+}
+.telefoneico:before {
+    content: '';
+    width:  15px;
+    height: 15px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+}
+
+.whatsappico:before {
+    content: '';
+    width:  15px;
+    height: 18px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+}
+
+.local:before {
+    background-image: url('../src/assets/local.png');
+}
+
+.clock-1:before{
+    background-image: url('../src/assets/clock.png');
+}
+
+.telefoneico:before {
+    background-image: url('../src/assets/telefoneico.png');
+}
+
+.whatsappico:before {
+    background-image: url('../src/assets/whatsapp.png');
+}
+.footer-2 {
+    background-image: url('../src/assets/footer2.png');
+    color: #c1c1c1;
+    text-align: center;
+}
+.footer-2 p {
+    text-align: center;
+    padding: 20px;
+}
+
+/*----------------------------------------------------------
+Media Queries <<<<<=========================================
+----------------------------------------------------------*/
+
+
+/*
+960px â€“ Tablets no formato paisagem e alguns monitores mais antigos
+***********************************************************/
+@media screen and (max-width:960px){
+    nav{
+        width:62.5%; /* 600px Ã· 960px */
+    }
+    h2{
+        font-size:2.6666666667em; /*48px Ã· 18px*/
+    }
+    .container img{
+        height:100px;
+    }
+    .container h3{
+        font-size: 1.6666666667em; /*30px Ã· 18px*/
+    }
+    .container p{
+        font-size: 0.8333333333em; /*15px Ã· 18px*/
+        top: 230px;
+    }
+}
+/*
+768px â€“ Tablets no formato retrato, como o iPad
+***********************************************************/
+@media screen and (max-width:768px){
+    /*header*/
+    nav{
+        float:none;
+        text-align:center;
+        width: 100%;
+    }
+    nav li a {
+        font-size: 13px;
+    }
+    /*.chamada*/
+    .chamada{
+        height:200px;
+    }
+    h2 {
+        font-size: 2.2222222222em; /*40px Ã· 18px*/
+    }
+
+    /*.container*/
+    .container img{
+        height:80px;
+    }
+    .container h3{
+        font-size: 1.6666666667em; /*30px Ã· 18px*/
+    }
+    .container p{
+        font-size: 0.7777777778em; /*14px Ã· 18px*/
+        height:auto;
+        line-height: 1.1428571428em; /*16px Ã· 14px*/
+        padding: 2.9166666667%; /* 7px Ã· 240px */
+        top: 215px;
+    }
+    .bloco-imagem {
+        height: auto;
+        margin-left: 6px;
+    }
+}
+/*
+480px â€“ Smartphones no formato paisagem com tela pequena
+***********************************************************/
+@media screen and (max-width:480px){
+    .menu-principal .logo a{
+        width: 40%;
+    }
+    .redes-sociais {
+        width: 60%;
+    }
+    nav li a {
+        font-size: 10px;
+    }
+    /*.chamada*/
+    .chamada{
+        height:130px;
+        margin-top:25px;
+    }
+    /*.container*/
+    .container{
+        margin:0;
+        padding:0;
+        width:100%;
+    }
+    .container h3{
+        float:left;
+        margin-top: 40px;
+        width: 46.875%; /*225px Ã· 480px*/
+    }
+    .container .col-3 {
+        width: 43%;
+    }
+    /* chamada */
+    .chamada .col-3 {
+        width: 28%;
+    }
+    .chamada .bloco-texto img {
+        width: 50px;
+    }
+    .chamada h3 {
+        font-size: 15px;
+    }
+    /*footer*/
+    .copyright, .desenvolvedor{
+        float:none;
+        margin: 0;
+        padding: 0;
+        text-align:center;
+    }
+    .desenvolvedor figure{
+        width:inherit;
+    }
+}
+/*
+320px â€“ Smartphones no formato retrato com tela pequena
+***********************************************************/
+@media screen and (max-width:320px){
+    /*.chamada*/
+    .chamada{
+        height:130px;
+        margin-top:20px;
+    }
+    .chamada h3{
+        font-size:0.7777777778em; /*14px Ã· 18px*/
+    }
+    /*.container*/
+    .container h3{
+        display:none;
+    }
+    .container p{
+        display:none;
+    }
+}
